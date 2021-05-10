@@ -7,9 +7,9 @@ import (
 var (
 	// 通用错误
 	Nil             *err.Error = nil
-	Unknown                    = err.NewError(err.ErrorCodeUnknown, 500, "未知错误")
-	BadFormat                  = err.NewError(err.ErrorCodeBadFormat, 400, "格式错误")
-	RunCommandError            = err.NewError(err.ErrorRunCommandError, 500, "执行命令异常")
-	Timeout                    = err.NewError(err.ErrorCodeTimeout, 408, "超时")
-	Unimplemented              = err.NewError(err.ErrorCodeUnimplemented, 404, "未实现!")
+	Unknown                    = err.NewError(1000, 500, "未知错误")
+	BadFormat                  = err.NewError(1001, 400, "格式错误")
+	RunCommandError            = err.NewError(1002, 500, "执行命令异常")
+	Timeout                    = err.NewError(1003, 408, "超时")
+	Unimplemented              = err.NewError(1004, 404, "未实现!")
 )

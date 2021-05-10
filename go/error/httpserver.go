@@ -3,13 +3,13 @@ package main
 import (
 	"fmt"
 
-	"github.com/go-gonic/gin"
+	"github.com/gin-gonic/gin"
 
 	err "github.com/geektime007/errors"
 	"github.com/geektime007/practice/go/error/errors"
 )
 
-func PrintMsg() err.Error {
+func PrintMsg() *err.Error {
 	fmt.Println("helloworld")
 	return errors.Unknown
 }
