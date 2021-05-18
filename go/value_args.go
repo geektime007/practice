@@ -3,6 +3,7 @@ package main
 import "fmt"
 
 func test(s []int) {
+	s[0] = 100
 	s = append(s, 4)
 	fmt.Println("s:", s)
 }
