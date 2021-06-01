@@ -12,10 +12,10 @@ func main() {
 	wg := sync.WaitGroup{}
 	wg.Add(20)
 	for i := 0; i < 10; i++ {
-		go func() {
+		go func(wg *sync.WaitGroup) {
 			fmt.Println("go1 i: ", i)
 			wg.Done()
-		}()
+		}(&wg)
 	}
 	for i := 0; i < 10; i++ {
 		go func(i int) {
